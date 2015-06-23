@@ -1,2 +1,2 @@
 # blocparty
-Where all of my code for BlocParty will live.
+Where my code for BlocParty lives.
