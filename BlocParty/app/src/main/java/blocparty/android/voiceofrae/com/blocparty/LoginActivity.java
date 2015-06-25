@@ -3,15 +3,12 @@ package blocparty.android.voiceofrae.com.blocparty;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
-
 import android.app.LoaderManager.LoaderCallbacks;
-import android.content.ContentResolver;
 import android.content.CursorLoader;
 import android.content.Loader;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.AsyncTask;
-
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.ContactsContract;
@@ -311,6 +308,11 @@ public class LoginActivity extends PlusBaseActivity implements LoaderCallbacks<C
 
     }
 
+    @Override
+    public void onConnectionSuspended(int i) {
+
+    }
+
     private interface ProfileQuery {
         String[] PROJECTION = {
                 ContactsContract.CommonDataKinds.Email.ADDRESS,
@@ -319,7 +321,7 @@ public class LoginActivity extends PlusBaseActivity implements LoaderCallbacks<C
 
         int ADDRESS = 0;
         int IS_PRIMARY = 1;
-    }
+    }1
 
 
     private void addEmailsToAutoComplete(List<String> emailAddressCollection) {

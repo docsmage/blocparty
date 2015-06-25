@@ -22,6 +22,12 @@
             android:name=".LoginActivity"
             android:label="@string/app_name"
             android:windowSoftInputMode="adjustResize|stateHidden" >
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />
+                <!--indicates that this is the main activity-->
+                <category android:name="android.intent.category.LAUNCHER" />
+                <!--indicates that this should be the launch point for the activity-->
+            </intent-filter>
         </activity>
 
         <meta-data
